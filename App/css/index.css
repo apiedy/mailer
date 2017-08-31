@@ -1,0 +1,35 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	padding: 0;
+	width: 100%;
+	display: table;
+	font-weight: 100;
+	font-family: Raleway;
+}
+
+.container {
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.content {
+	text-align: center;
+	display: inline-block;
+}
+
+.title {
+	font-size: 96px;
+}
+
+form {
+	text-align: left;
+}
+
+a, a:hover {
+	color: black;
+	text-decoration: none;
+}
