@@ -9,9 +9,13 @@
   "author": "abhishek piedy",
   "license": "ISC",
   "dependencies": {
+    "bluebird": "^3.5.0",
     "body-parser": "^1.17.2",
     "dotenv": "^4.0.0",
+    "email-templates": "^2.7.1",
     "express": "^4.15.4",
-    "nodemailer": "^4.0.1"
+    "handlebars": "^4.0.10",
+    "nodemailer": "^4.0.1",
+    "path": "^0.12.7"
   }
 }
