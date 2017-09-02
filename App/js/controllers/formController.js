@@ -1,11 +1,11 @@
 app.controller('FormController', ['$scope', '$http', function($scope, $http){
 	var reset = function () {
-		$scope.options = null;
+		$scope.user = null;
 	}
 
 	$scope.mail = function() {
 		//mail function here to the backend
-		console.log($scope.options);
+		console.log($scope.user);
 
 		return $http({
 			method: "POST",
@@ -13,7 +13,7 @@ app.controller('FormController', ['$scope', '$http', function($scope, $http){
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			data: $scope.options
+			data: $scope.user
 		}).then(function successCallback(response) {
 			return response.data;
 		}, function errorCallback(response) {

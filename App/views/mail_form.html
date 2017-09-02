@@ -1,21 +1,24 @@
 <div class="mailForm content" ng-controller="FormController">
 	<form ng-submit="mail()">
 		<div class="form-group">
+			<label for="name">Name</label>
+			<input type="text" class="form-control" id="name" placeholder="Enter name" required ng-model="user.name">
+			<small id="nameHelp" class="form-text text-muted">The name of the receiver.</small>
+		</div>
+
+		<div class="form-group">
 			<label for="email">Email address</label>
-			<input type="email" class="form-control" id="email" placeholder="Enter email" required ng-model="options.to">
-			<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+			<input type="email" class="form-control" id="email" placeholder="Enter email" required ng-model="user.email">
+			<small id="emailHelp" class="form-text text-muted">Email of the receiver.</small>
 		</div>
 
 		<div class="form-group">
-			<label for="subject">Subject</label>
-			<input type="text" class="form-control" id="subject" placeholder="Enter subject" required ng-model="options.subject">
-			<small id="subHelp" class="form-text text-muted">The subject for the outgoing email.</small>
-		</div>
-
-		<div class="form-group">
-			<label for="content">Content</label>
-			<input type="text" id="content" class="form-control" placeholder="Enter content" required ng-model="options.text">
-			<small id="contHelp" class="form-text text-muted">The content for the mail.</small>
+			<label for="template">Select a template</label>
+			<select id="template" class="form-control"  required ng-model="user.template">
+				<option value="">-- Select --</option>
+				<option value="welcome-email">Welcome</option>
+			</select>
+			<small id="tmpltHelp" class="form-text text-muted">The template for the mail.</small>
 		</div>
 
 		<button type="submit" class="btn btn-primary">Send Mail</button>
